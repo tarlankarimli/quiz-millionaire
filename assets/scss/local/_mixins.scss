@@ -1,0 +1,13 @@
+@mixin center($display: flex, $justify-content: center, $align-items: center) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+  }
+  @mixin btn-color($color, $color-hover) {
+    background: $color;
+    &:hover {
+      background: $color-hover;
+      transition: 0.2s ease-in-out;
+    }
+  }
+  

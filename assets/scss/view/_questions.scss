@@ -1,0 +1,26 @@
+.question-btns > a {
+    margin: 2rem 0;
+}
+.add-question {
+    width: 30%;
+    &-header {
+        font-size: 3rem;
+        color: $white;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    label {
+        display: block;
+        font-size: 2rem;
+        color: $white;
+        margin: 1rem 0
+    }
+    input, textarea {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    input {
+        height: 4rem;
+        
+    }
+}

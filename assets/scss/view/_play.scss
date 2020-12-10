@@ -1,0 +1,6 @@
+.play {
+    @extend .container;
+    display: block;
+    background: url('../images/play-bg.png') no-repeat;
+    background-size: cover;    
+}

@@ -1,0 +1,10 @@
+* {
+    border-radius: 4px;
+}
+.container {
+    height: 100vh;
+    @include center;
+    background: $midnight-blue;
+    width: 100vw;
+    position: relative;
+}

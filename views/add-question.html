@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add question</title>
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/views/index.html"><li class="fa fa-home fa-3x"></li></a>
+        <!-- <div class="question-btns">
+            <a href="#" class="btn btn-info">Easy</a>
+            <a href="#" class="btn btn-warning">Medium</a>
+            <a href="#" class="btn btn-danger">Hard</a>
+        </div> -->
+        <div class="add-question">
+            <h3 class="add-question-header">Easy questions</h3>
+            <div class="form">
+                <label for="question">Add your question</label>
+                <textarea name="question" id="add-question" rows="4" placeholder="Which is not the programming language?"></textarea>
+                <label for="answer-a">Answer: A</label>
+                <input type="text" id="answer-a" placeholder="Java">
+                <label for="answer-b">Answer: B</label>
+                <input type="text" id="answer-b" placeholder="HTML">
+                <label for="answer-c">Answer: C</label>
+                <input type="text" id="answer-c" placeholder="C#">
+                <label for="answer-d">Answer: D</label>
+                <input type="text" id="answer-d" placeholder="Pyhton">
+            </div>
+            <button class="btn btn-success btn-add-question btn-block">Add question</button>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>
