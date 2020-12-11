@@ -74,14 +74,14 @@
       padding: 1rem;
       font-size: 3rem;
       color: $white;
-      display: flex;
-      justify-content: center;
       height: 4.8rem;
+      padding-left: 4rem;
       &:first-of-type {
         background: rgba(255, 255, 81, 0.562);
       }
       .item-id {
-        margin-right: 4rem;
+          display: inline-block;
+          width: 8rem;
       }
     }
   }
