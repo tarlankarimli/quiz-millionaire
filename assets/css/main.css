@@ -131,15 +131,111 @@ table {
 }
 
 .play .main {
-  background: red;
   height: 100%;
   width: 70%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.play .main .countdown {
+  font-size: 10rem;
+  margin-top: 5rem;
+  color: #fff;
+}
+
+.play .main .questions {
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 2rem;
+}
+
+.play .main .questions .question {
+  width: 100%;
+  font-size: 2rem;
+  background: #1060b1f8;
+  min-height: 12rem;
+  padding: 1rem 5rem;
+  -webkit-clip-path: polygon(0 50%, 5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+          clip-path: polygon(0 50%, 5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+}
+
+.play .main .questions .answers {
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.play .main .questions .answers .answer {
+  width: 50rem;
+  height: 11rem;
+  background: #1060b1d2;
+  margin: 1rem 0;
+  -webkit-clip-path: polygon(0 50%, 10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+          clip-path: polygon(0 50%, 10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 4rem;
+  position: relative;
+}
+
+.play .main .questions .answers .answer:hover {
+  background: #003366;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.play .main .questions .answers .answer > :first-child {
+  position: absolute;
+  left: 3rem;
+  font-size: 4rem;
 }
 
 .play .level-list {
   height: 100%;
-  width: 25%;
-  background: green;
+  width: 38rem;
+  background: #003366;
+  border-left: 0.2rem solid #fff;
+}
+
+.play .level-list-item {
+  padding: 1rem;
+  font-size: 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 4.8rem;
+}
+
+.play .level-list-item:first-of-type {
+  background: rgba(255, 255, 81, 0.562);
+}
+
+.play .level-list-item .item-id {
+  margin-right: 4rem;
 }
 
 .btn {
