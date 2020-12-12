@@ -91,6 +91,7 @@ table {
 
 .add-question {
   width: 30%;
+  display: none;
 }
 
 .add-question-header {
@@ -98,6 +99,7 @@ table {
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
+  text-transform: capitalize;
 }
 
 .add-question label {
@@ -154,6 +156,7 @@ table {
   position: absolute;
   bottom: 0;
   padding: 1rem 2rem;
+  color: #fff;
 }
 
 .play .main .questions .question {
@@ -208,6 +211,7 @@ table {
   position: absolute;
   left: 3rem;
   font-size: 4rem;
+  color: #FFC107;
 }
 
 .play .level-list {

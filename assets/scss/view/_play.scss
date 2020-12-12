@@ -25,6 +25,7 @@
       position: absolute;
       bottom: 0;
       padding: 1rem 2rem;
+      color: $white;
       .question {
         width: 100%;
         font-size: 2rem;
@@ -56,6 +57,7 @@
               position: absolute;
               left: 3rem;
               font-size: 4rem;
+              color: $warning;
           }
         }
         // .selected {

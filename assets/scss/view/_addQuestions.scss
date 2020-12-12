@@ -3,11 +3,14 @@
 }
 .add-question {
     width: 30%;
+    display: none;
+    
     &-header {
         font-size: 3rem;
         color: $white;
         text-align: center;
         margin-bottom: 2rem;
+        text-transform: capitalize;
     }
     label {
         display: block;
