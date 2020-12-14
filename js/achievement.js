@@ -60,32 +60,28 @@ export let level = [
       amount: "₼ 100"
   }
  ] 
+ const levelList = document.querySelector('.level-list');
 
-const levelList = document.querySelector('.level-list');
+    const showList = () => {
+        level.map(value => {
+            addLevelItems(value)
+        })
+    }
+    const addLevelItems = ({id, amount}) => {
+        const itemId = document.createElement('span');
+        const itemContent = document.createElement('span');
+        const levelListItem = document.createElement('div');
 
- const render = () => {
+        itemId.setAttribute('class', 'item-id');
+        itemContent.setAttribute('class', 'item-content');
+        levelListItem.setAttribute('class', 'level-list-item');
+
+        itemId.textContent = id;
+        itemContent.textContent = amount;
+
+        levelListItem.appendChild(itemId);
+        levelListItem.appendChild(itemContent);
+        levelList.appendChild(levelListItem);
+    }
     showList();
- }
-const showList = () => {
-    level.map(value => {
-        addLevelItems(value)
-    })
-}
-const addLevelItems = ({id, amount}) => {
-    const itemId = document.createElement('span');
-    const itemContent = document.createElement('span');
-    const levelListItem = document.createElement('div');
 
-    itemId.setAttribute('class', 'item-id');
-    itemContent.setAttribute('class', 'item-content');
-    levelListItem.setAttribute('class', 'level-list-item');
-
-    itemId.textContent = id;
-    itemContent.textContent = amount;
-
-    levelListItem.appendChild(itemId);
-    levelListItem.appendChild(itemContent);
-    levelList.appendChild(levelListItem);
-}
- 
-render();

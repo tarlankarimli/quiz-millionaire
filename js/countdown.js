@@ -1,6 +1,6 @@
 const timeLeft = document.querySelector('.countdown');
 
-export const countdown = () => {
+ const countdown = () => {
     let givenTime = 30;
 
 const setCountdown = setInterval(() => {
@@ -17,3 +17,5 @@ const showCountdown = (givenTime) => {
     span.textContent = givenTime;
     timeLeft.appendChild(span);
 }
+
+countdown()

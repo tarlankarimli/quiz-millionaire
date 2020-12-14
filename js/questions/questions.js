@@ -60,9 +60,7 @@ export const question = () => {
             default:
                 break;
         }
-        console.table(easy)
-        console.log(medium)
-        console.log(hard)
     }
 }
 
+question()
