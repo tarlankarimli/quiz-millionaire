@@ -27,13 +27,15 @@ export const question = () => {
         const inputB = document.querySelector('#input-b'); 
         const inputC = document.querySelector('#input-c'); 
         const inputD = document.querySelector('#input-d');
+        const rightAnswer = document.querySelector('#right-answer');
 
         let item = {
             question: inputQuestion.value,
             a: inputA.value,
             b: inputB.value,
             c: inputC.value,
-            d: inputD.value
+            d: inputD.value,
+            rightAnswer: rightAnswer.value
         }
         switch (level) {
             case "easy":
@@ -62,5 +64,4 @@ export const question = () => {
         }
     }
 }
-
 question()

@@ -60,9 +60,6 @@
               color: $warning;
           }
         }
-        // .selected {
-        //     background: $warning;
-        // }
       }
     }
   }
@@ -78,9 +75,6 @@
       color: $white;
       height: 4.8rem;
       padding-left: 4rem;
-      &:first-of-type {
-        background: rgba(255, 255, 81, 0.562);
-      }
       .item-id {
           display: inline-block;
           width: 8rem;
