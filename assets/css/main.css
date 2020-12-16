@@ -234,6 +234,10 @@ table {
   width: 8rem;
 }
 
+.play .selected {
+  background: #FFC107;
+}
+
 .btn {
   width: 25rem;
   height: 6rem;
