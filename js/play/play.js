@@ -1,5 +1,5 @@
 import {showList} from './achievement.js';
-import {countdown, timer} from '../countdown.js';
+import {countdown, stopCountdown} from '../countdown.js';
 import {easy, medium, hard} from '../questions/questionDB.js';
 
 
@@ -12,25 +12,21 @@ document.addEventListener('DOMContentLoaded', ()=> {
 })
 
 const render = () => {
-    showList()
-    countdown()
-    const levelListItem = document.querySelector(`#item-${levelArrow}`);
-    levelListItem.classList.add('selected')
-    // levelListItem.style.background = '#FFC107';
+    showList();
+    countdown();
+    startPosition();  
     levelQuestion();
     addAnswerEvents();
-//     var a = easy
-// var res = a.sort(function() {
-//   return 0.5 - Math.random();
-// });
-// console.log(res.slice(a,1))
-// console.log(Math.floor(Math.random() * easy.length));
 }
-
+// start points for each new question
+const startPosition = () => {
+    const levelListItem = document.querySelector(`#item-${levelArrow}`);
+    levelListItem.style.background = '#FFC107';
+}
 
 //  display questions
 const showQuestion = (questionType) => {
-const randomQuestion = Math.floor(Math.random() * questionType.length);
+    const randomQuestion = Math.floor(Math.random() * questionType.length);
 
     const questionContent = document.querySelector('.question');
     const itemA = document.querySelector('.itemA');
@@ -45,7 +41,7 @@ const randomQuestion = Math.floor(Math.random() * questionType.length);
     itemD.textContent = questionType[randomQuestion].d;
 }
 
-// level of question
+// sorting questions due to levels and pass them to display
 const levelQuestion = () => {
     switch (true) {
         case levelArrow < 6:
@@ -75,6 +71,7 @@ const addAnswerEvents = () => {
             e.target.style.background = '#ffc10786';
             id = e.target.id;
         }
+        stopCountdown();
         checkAnswer(id);
     }    
     selectAnswer.forEach(item => {
@@ -88,10 +85,25 @@ const addAnswerEvents = () => {
 }
 //  check answer
 const checkAnswer = (id) => {
+   const itemAnswer = document.querySelector(`#${id}`)
     if(id === questionTypePointer[levelArrow].rightAnswer) {
+        checkAnswerTimeout( itemAnswer,"#5cb85c");
         levelArrow++;
-        render();
+        setNewQuestion(itemAnswer, "#1060b1d2");
         return
     } 
-    console.log("noooo")
+    checkAnswerTimeout(itemAnswer, "#d9534f");
+}
+// waiting 2 seconds for getting specific answer color to display right or wrong answer
+const checkAnswerTimeout = (itemAnswer, color) => {
+    setTimeout(() => {
+        itemAnswer.style.background = color;
+    }, 2000);
+}
+// if answer is right set the new question
+const setNewQuestion = ( itemAnswer,color) => {
+    setTimeout(() => {
+        render();
+        itemAnswer.style.background = color
+    }, 3000);
 }

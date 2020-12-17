@@ -63,8 +63,10 @@ export let level = [
  ] 
 
  const levelList = document.querySelector('.level-list');
+ 
 // creating DOM elements to display game level data
    export const showList = () => {
+    levelList.textContent = '';
         level.map(value => {
             addLevelItems(value)
         })
