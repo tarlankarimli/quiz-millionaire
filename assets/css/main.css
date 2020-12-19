@@ -132,6 +132,32 @@ table {
   background-size: cover;
 }
 
+.play .game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #003366c5;
+}
+
+.play .game-over h2 {
+  font-size: 10rem;
+  color: #d9534f;
+  margin-bottom: 3rem;
+}
+
 .play .main {
   height: 100%;
   width: 70%;
@@ -234,10 +260,6 @@ table {
   width: 8rem;
 }
 
-.play .selected {
-  background: #FFC107;
-}
-
 .btn {
   width: 25rem;
   height: 6rem;
@@ -253,6 +275,8 @@ table {
   margin: 0 1rem;
   font-size: 2rem;
   color: #fff;
+  border: none;
+  outline: none;
 }
 
 .btn:hover {
@@ -324,4 +348,5 @@ table {
   position: absolute;
   left: 1rem;
   top: 1rem;
+  z-index: 1;
 }

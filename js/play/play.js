@@ -1,5 +1,5 @@
 import {showList} from './achievement.js';
-import {countdown, stopCountdown} from '../countdown.js';
+import {countdown, stopCountdown, gameOver} from '../countdown.js';
 import {easy, medium, hard} from '../questions/questionDB.js';
 
 
@@ -93,14 +93,15 @@ const checkAnswer = (id) => {
         return
     } 
     checkAnswerTimeout(itemAnswer, "#d9534f");
+    gameOver(3000);
 }
-// waiting 2 seconds for getting specific answer color to display right or wrong answer
+// waiting certain seconds for getting specific answer color to display right or wrong answer
 const checkAnswerTimeout = (itemAnswer, color) => {
     setTimeout(() => {
         itemAnswer.style.background = color;
     }, 2000);
 }
-// if answer is right set the new question
+// if the answer is right set the new question
 const setNewQuestion = ( itemAnswer,color) => {
     setTimeout(() => {
         render();

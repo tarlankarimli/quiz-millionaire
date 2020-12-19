@@ -5,6 +5,8 @@
   margin: 0 1rem;
   font-size: 2rem;
   color: $white;
+  border: none;
+  outline: none;
   &:hover {
     cursor: pointer;
   }
@@ -40,4 +42,5 @@
   position: absolute;
   left: 1rem;
   top: 1rem;
+  z-index: 1;
 }

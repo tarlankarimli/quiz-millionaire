@@ -1,5 +1,5 @@
 import {easy, medium, hard} from './questionDB.js';
-
+//  creating DOM elements, setting attributes and adding events
 export const question = () => {
     const questionsBtns = document.querySelector('.question-btns');
     const questionForm = document.querySelector('.add-question');
@@ -14,13 +14,14 @@ export const question = () => {
     mediumBtn.addEventListener('click', ()=> showForm("medium"));
     hardBtn.addEventListener('click', ()=> showForm("hard"));
     addQuestionBtn.addEventListener('click', ()=> addQuestion(level))
-
+// showing form to add questions
     const showForm = (questionType) => {
         questionsBtns.style.display = 'none';
         questionForm.style.display = 'block';
         questionFormHeader.textContent = `${questionType} questions`;
         level = questionType;
     }
+    // adding questions
     const addQuestion = (level) => {
         const inputQuestion = document.querySelector('#add-question');
         const inputA = document.querySelector('#input-a'); 
@@ -37,6 +38,7 @@ export const question = () => {
             d: inputD.value,
             rightAnswer: rightAnswer.value
         }
+        // specify questions level
         switch (level) {
             case "easy":
                 easy.push(item);

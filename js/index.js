@@ -1,1 +1,0 @@
-import {countdown} from '../js/countdown.js';
