@@ -1,9 +1,9 @@
-export let easy = []; 
+export let easy; 
 export let medium = []; 
 export let hard = []; 
-
+import {easyQuestions} from './base.js';
 if (localStorage.getItem('easyStorage') == null) {       
-    easy = [];
+    easy = easyQuestions;
 } else {
     easy = JSON.parse(localStorage.getItem('easyStorage'));    
 }
@@ -17,3 +17,5 @@ if (localStorage.getItem('hardStorage') == null) {
 } else {
     hard = JSON.parse(localStorage.getItem('hardStorage'));    
 }
+
+

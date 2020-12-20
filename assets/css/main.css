@@ -63,6 +63,7 @@ table {
 
 * {
   border-radius: 4px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .container {
@@ -81,17 +82,10 @@ table {
   position: relative;
 }
 
-* {
-  font-family: 'Noto Sans KR', sans-serif;
-}
-
-.question-btns > a {
-  margin: 2rem 0;
-}
-
-.add-question {
-  width: 30%;
-  display: none;
+.countdown {
+  font-size: 10rem;
+  margin-top: 5rem;
+  color: #fff;
 }
 
 .add-question-header {
@@ -103,9 +97,55 @@ table {
 }
 
 .add-question label {
-  display: block;
   font-size: 2rem;
   color: #fff;
+}
+
+.btn {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.game-over h2 {
+  font-size: 10rem;
+  color: #d9534f;
+  margin-bottom: 3rem;
+}
+
+.level-list-item {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.questions {
+  color: #fff;
+}
+
+.questions .question {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.questions .answer {
+  font-size: 3rem;
+}
+
+.questions .answer > :first-child {
+  font-size: 4rem;
+  color: #FFC107;
+}
+
+.question-btns > a {
+  margin: 2rem 0;
+}
+
+.add-question {
+  width: 30%;
+  display: none;
+}
+
+.add-question label {
+  display: block;
   margin: 1rem 0;
 }
 
@@ -132,32 +172,6 @@ table {
   background-size: cover;
 }
 
-.play .game-over {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #003366c5;
-}
-
-.play .game-over h2 {
-  font-size: 10rem;
-  color: #d9534f;
-  margin-bottom: 3rem;
-}
-
 .play .main {
   height: 100%;
   width: 70%;
@@ -168,96 +182,6 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.play .main .countdown {
-  font-size: 10rem;
-  margin-top: 5rem;
-  color: #fff;
-}
-
-.play .main .questions {
-  width: 100%;
-  height: 40rem;
-  position: absolute;
-  bottom: 0;
-  padding: 1rem 2rem;
-  color: #fff;
-}
-
-.play .main .questions .question {
-  width: 100%;
-  font-size: 2rem;
-  background: #1060b1f8;
-  min-height: 12rem;
-  padding: 1rem 5rem;
-  -webkit-clip-path: polygon(0 50%, 5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
-          clip-path: polygon(0 50%, 5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
-}
-
-.play .main .questions .answers {
-  height: 25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.play .main .questions .answers .answer {
-  width: 50rem;
-  height: 11rem;
-  background: #1060b1d2;
-  margin: 1rem 0;
-  -webkit-clip-path: polygon(0 50%, 10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
-          clip-path: polygon(0 50%, 10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
-  font-size: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 4rem;
-  position: relative;
-}
-
-.play .main .questions .answers .answer:hover {
-  background: #003366;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.play .main .questions .answers .answer > :first-child {
-  position: absolute;
-  left: 3rem;
-  font-size: 4rem;
-  color: #FFC107;
-}
-
-.play .level-list {
-  height: 100%;
-  width: 38rem;
-  background: #003366;
-  border-left: 0.2rem solid #fff;
-}
-
-.play .level-list-item {
-  padding: 1rem;
-  font-size: 3rem;
-  color: #fff;
-  height: 4.8rem;
-  padding-left: 4rem;
-}
-
-.play .level-list-item .item-id {
-  display: inline-block;
-  width: 8rem;
 }
 
 .btn {
@@ -273,8 +197,6 @@ table {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 1rem;
-  font-size: 2rem;
-  color: #fff;
   border: none;
   outline: none;
 }
@@ -349,4 +271,100 @@ table {
   left: 1rem;
   top: 1rem;
   z-index: 1;
+}
+
+.level-list {
+  height: 100%;
+  width: 38rem;
+  background: #003366;
+  border-left: 0.2rem solid #fff;
+}
+
+.level-list-item {
+  height: 4.8rem;
+  padding: 1rem 4rem;
+}
+
+.level-list-item .item-id {
+  display: inline-block;
+  width: 8rem;
+}
+
+.game-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #003366c5;
+}
+
+.questions {
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 2rem;
+}
+
+.questions .question {
+  width: 100%;
+  background: #1060b1f8;
+  min-height: 12rem;
+  padding: 5rem;
+  -webkit-clip-path: polygon(0 50%, 5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+          clip-path: polygon(0 50%, 5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+}
+
+.questions .answers {
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.questions .answers .answer {
+  width: 50rem;
+  height: 11rem;
+  background: #1060b1d2;
+  margin: 1rem 0;
+  -webkit-clip-path: polygon(0 50%, 10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+          clip-path: polygon(0 50%, 10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 4rem;
+  position: relative;
+}
+
+.questions .answers .answer:hover {
+  background: #003366;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.questions .answers .answer > :first-child {
+  position: absolute;
+  left: 3rem;
 }

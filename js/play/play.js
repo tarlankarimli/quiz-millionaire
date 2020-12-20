@@ -5,10 +5,12 @@ import {easy, medium, hard} from '../questions/questionDB.js';
 
 let levelArrow = 0;
 let questionTypePointer;
+let randomQuestion;
 const selectAnswer = document.querySelectorAll('.answer');
 
 document.addEventListener('DOMContentLoaded', ()=> {
     render()
+    console.log(easy)
 })
 
 const render = () => {
@@ -26,7 +28,7 @@ const startPosition = () => {
 
 //  display questions
 const showQuestion = (questionType) => {
-    const randomQuestion = Math.floor(Math.random() * questionType.length);
+    randomQuestion = Math.floor(Math.random() * questionType.length);
 
     const questionContent = document.querySelector('.question');
     const itemA = document.querySelector('.itemA');
@@ -44,15 +46,15 @@ const showQuestion = (questionType) => {
 // sorting questions due to levels and pass them to display
 const levelQuestion = () => {
     switch (true) {
-        case levelArrow < 6:
+        case levelArrow < 5:
             showQuestion(easy);
             questionTypePointer = easy;
             break;
-        case levelArrow < 11:
+        case levelArrow < 10:
             showQuestion(medium)
             questionTypePointer = medium;
             break;
-            case levelArrow < 16:
+            case levelArrow < 15:
             showQuestion(hard)
             questionTypePointer = hard;
             break;
@@ -86,7 +88,9 @@ const addAnswerEvents = () => {
 //  check answer
 const checkAnswer = (id) => {
    const itemAnswer = document.querySelector(`#${id}`)
-    if(id === questionTypePointer[levelArrow].rightAnswer) {
+   console.log("id", id)
+   console.log("cavab", questionTypePointer[randomQuestion].rightAnswer)
+    if(id === questionTypePointer[randomQuestion].rightAnswer) {
         checkAnswerTimeout( itemAnswer,"#5cb85c");
         levelArrow++;
         setNewQuestion(itemAnswer, "#1060b1d2");

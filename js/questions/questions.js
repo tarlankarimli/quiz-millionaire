@@ -64,6 +64,7 @@ export const question = () => {
             default:
                 break;
         }
+        location.reload();
     }
 }
 question()

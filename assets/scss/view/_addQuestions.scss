@@ -1,21 +1,12 @@
 .question-btns > a {
     margin: 2rem 0;
 }
+// form for adding question
 .add-question {
     width: 30%;
     display: none;
-    
-    &-header {
-        font-size: 3rem;
-        color: $white;
-        text-align: center;
-        margin-bottom: 2rem;
-        text-transform: capitalize;
-    }
     label {
         display: block;
-        font-size: 2rem;
-        color: $white;
         margin: 1rem 0
     }
     input, textarea {
@@ -23,7 +14,6 @@
         padding: 0 1rem;
     }
     input {
-        height: 4rem;
-        
+        height: 4rem;        
     }
 }

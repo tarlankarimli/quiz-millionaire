@@ -2,7 +2,7 @@
 export let level = [
   {
       id: 14,
-      amount: "₼ 1,000,000"
+      amount: "₼ 999,999"
   },
   {
       id: 13,
